@@ -10,17 +10,6 @@
 
 The following files are the backbone of the project. Contributors MUST NOT modify them. CI enforces this.
 
-<<<<<<< HEAD
-- `.github/workflows/`: CI pipeline. Modifying this breaks the ratchet. Only maintainer can edit.
-- `scripts/section_score.py`: The scoring engine. Changing this would let PRs game the metric.
-- `checklists/*.yml`: Scoring rubrics. These define truth. Only maintainer edits.
-- `app.json`: Expo app identity. Changing this breaks builds for everyone.
-- `tsconfig.json`: TypeScript strictness settings. Loosening these defeats type safety.
-- `babel.config.js`: Transpilation config. Touching this causes phantom build errors.
-- `.eslintrc.js`: Lint rules. These are hard gates in CI; changing them bypasses quality control.
-- `package.json`: Only maintainer may add/remove dependencies. Contributors propose via issue.
-- `jest.config.js`: Test harness config. Essential for preventing CI circumvention.
-=======
 - `.github/workflows/`: CI pipeline — modifying this breaks the ratchet; only maintainer can edit.
 - `scripts/section_score.py`: scoring engine — changing this lets PRs game the metric.
 - `checklists/*.yml`: scoring rubrics — these define truth; only maintainer edits.
@@ -31,7 +20,6 @@ The following files are the backbone of the project. Contributors MUST NOT modif
 - `package.json`: dependency lock — only maintainer may add/remove packages; contributors propose via issue.
 - `jest.config.js`: test harness configuration — altering this can suppress failing tests from CI output.
 - `__tests__/golden/`: golden flow test fixtures — modifying these changes the acceptance bar without fixing real bugs.
->>>>>>> d53c6fa (feat(section-00): add test harness files and fix reasons format to reach 100/100)
 
 **Why:** Karpathy's pattern works because infrastructure is fixed and only the editable surface changes. These files are the fixed infrastructure. Everything else is the editable surface. The test harness and scoring engine are especially critical: anyone who can change them can make any PR look green without improving the product.
 
