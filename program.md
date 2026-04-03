@@ -10,16 +10,18 @@
 
 The following files are the backbone of the project. Contributors MUST NOT modify them. CI enforces this.
 
-- `.github/workflows/` — CI pipeline. Modifying this breaks the ratchet. Only maintainer can edit.
-- `scripts/section_score.py` — The scoring engine. Changing this would let PRs game the metric.
-- `checklists/*.yml` — Scoring rubrics. These define truth. Only maintainer edits.
-- `app.json` — Expo app identity. Changing this breaks builds for everyone.
-- `tsconfig.json` — TypeScript strictness settings. Loosening these defeats type safety.
-- `babel.config.js` — Transpilation config. Touching this causes phantom build errors.
-- `.eslintrc.js` — Lint rules. These are hard gates in CI; changing them bypasses quality control.
-- `package.json` — Only maintainer may add/remove dependencies. Contributors propose via issue.
+- `.github/workflows/`: CI pipeline — reason: modifying this breaks the ratchet; only maintainer can edit.
+- `scripts/section_score.py`: scoring engine — reason: changing this lets PRs game the metric without improving the product.
+- `checklists/*.yml`: scoring rubrics — reason: these define truth; only maintainer edits to prevent score manipulation.
+- `app.json`: Expo app identity — reason: changing this breaks builds for every contributor using Expo Go.
+- `tsconfig.json`: TypeScript strictness settings — reason: loosening these defeats type safety and hides real bugs.
+- `babel.config.js`: transpilation config — reason: touching this causes phantom build errors that are hard to trace.
+- `.eslintrc.js`: lint rules — reason: these are hard gates in CI; changing them bypasses quality control silently.
+- `package.json`: dependency lock — reason: only maintainer may add/remove packages; contributors propose via issue.
+- `jest.config.js`: test harness configuration — reason: altering this can suppress failing tests from CI output.
+- `__tests__/golden/`: golden flow test fixtures — reason: modifying these changes the acceptance bar without fixing real bugs.
 
-**Why:** Karpathy's pattern works because infrastructure is fixed and only the editable surface changes. These files are the fixed infrastructure. Everything else is the editable surface.
+**Why:** Karpathy's pattern works because infrastructure is fixed and only the editable surface changes. These files are the fixed infrastructure. Everything else is the editable surface. The test harness (`jest.config.js`, `__tests__/golden/`) and scoring engine are especially critical: anyone who can change them can make any PR look green without improving the product.
 
 ---
 
