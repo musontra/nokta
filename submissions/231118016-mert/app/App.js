@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef } from 'react';
 import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -8,6 +9,12 @@ import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
 import { AuditWidget } from './nokta-audit';
 import { auditStorage } from './auditStorage';
+=======
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+>>>>>>> 5b335a1 (add all missing submissions)
 
 import IdeaScreen from './app/screens/IdeaScreen';
 import QuestionsScreen from './app/screens/QuestionsScreen';
@@ -17,6 +24,7 @@ import ExpertScreen from './app/screens/ExpertScreen';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+<<<<<<< HEAD
   const [currentScreen, setCurrentScreen] = useState('IdeaScreen');
   const navigationRef = useRef();
   const routeNameRef = useRef();
@@ -38,6 +46,11 @@ export default function App() {
           routeNameRef.current = currentRouteName;
         }}
       >
+=======
+  return (
+    <SafeAreaProvider>
+      <NavigationContainer>
+>>>>>>> 5b335a1 (add all missing submissions)
         <Stack.Navigator
           initialRouteName="IdeaScreen"
           screenOptions={{
@@ -73,6 +86,7 @@ export default function App() {
           />
         </Stack.Navigator>
       </NavigationContainer>
+<<<<<<< HEAD
       
       <AuditWidget
         appName="Nokta App"
@@ -99,6 +113,8 @@ export default function App() {
         }}
         initialPosition={{ bottom: 100, right: 16 }}
       />
+=======
+>>>>>>> 5b335a1 (add all missing submissions)
     </SafeAreaProvider>
   );
 }

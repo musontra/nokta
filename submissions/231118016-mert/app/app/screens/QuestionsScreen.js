@@ -187,7 +187,11 @@ const styles = StyleSheet.create({
     textAlignVertical: 'top',
   },
   button: {
+<<<<<<< HEAD
     backgroundColor: '#3b82f6',
+=======
+    backgroundColor: '#0f3460',
+>>>>>>> 5b335a1 (add all missing submissions)
     paddingVertical: 16,
     paddingHorizontal: 24,
     borderRadius: 12,

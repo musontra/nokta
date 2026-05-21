@@ -45,8 +45,11 @@ Uzman onayı sonucunda:
 - **[v2]** `ExpertScreen` (HITL) eklendi: Readiness skoru üzerinden risk seviyesi hesaplanıyor (HOOTL/HOTL/HITL), atanan uzman profili gösteriliyor, MCP → Slack adapter simülasyonu ile uzman bildirim akışı çalışıyor, uzman geri bildirimi sonrasında onayla/revize et seçeneği sunuluyor.
 - **[v2]** `SpecScreen`'e "Uzmana Gönder" butonu eklendi; score ve specSections verisi ExpertScreen'e aktarılıyor.
 - **[v2]** `App.js`'e ExpertScreen rotası eklendi.
+<<<<<<< HEAD
 - **[v3]** `nokta-audit` (Phase A): Uygulamaya drop-in bug-raporlama widget'ı eklendi (`<AuditWidget />`).
 - **[v3]** `Autonomous Forge` (Phase B): Otonom onarım döngüsü (Auto-Repair Loop) kurularak 3 adet başarılı onarım ve 1 adet geri alma (rollback) döngüsü koşturuldu; detayları `FORGE.md` dosyasına loglandı.
+=======
+>>>>>>> 5b335a1 (add all missing submissions)
 - **AI Araçları:** Antigravity (Google DeepMind), Gemini AI (API)
 
 ## Kurulum ve Çalıştırma

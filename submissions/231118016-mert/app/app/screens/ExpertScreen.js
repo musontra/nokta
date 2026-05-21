@@ -190,7 +190,11 @@ const ExpertScreen = ({ route, navigation }) => {
     <ScrollView style={styles.container} contentContainerStyle={styles.scroll}>
       {/* Başlık */}
       <View style={styles.header}>
+<<<<<<< HEAD
         <Text style={styles.headerTitle}>HITL Uzman Onay Paneli</Text>
+=======
+        <Text style={styles.headerTitle}>Uzman İncelemesi</Text>
+>>>>>>> 5b335a1 (add all missing submissions)
         <Text style={styles.headerSub}>Human-in-the-Loop (nokta-hoop)</Text>
       </View>
 
@@ -360,7 +364,11 @@ const styles = StyleSheet.create({
   actionRow: { flexDirection: 'row', gap: 10, marginTop: 4 },
   approveBtn: {
     flex: 1,
+<<<<<<< HEAD
     backgroundColor: '#22c55e',
+=======
+    backgroundColor: '#2e7d32',
+>>>>>>> 5b335a1 (add all missing submissions)
     borderRadius: 10,
     paddingVertical: 14,
     alignItems: 'center',
